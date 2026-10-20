@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="16">
+            <Label
+                Text="Cálculo de aporte al IESS"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label Text="Ingresa tus datos para calcular tu aporte mensual." />
+
+            <Entry
+                x:Name="NameEntry"
+                Placeholder="Nombre"
+                ClearButtonVisibility="WhileEditing"
+                SemanticProperties.Description="Nombre" />
+
+            <Entry
+                x:Name="LastNameEntry"
+                Placeholder="Apellido"
+                ClearButtonVisibility="WhileEditing"
+                SemanticProperties.Description="Apellido" />
+
+            <Entry
+                x:Name="AgeEntry"
+                Placeholder="Edad"
+                Keyboard="Numeric"
+                ClearButtonVisibility="WhileEditing"
+                SemanticProperties.Description="Edad, solo números" />
+
+            <Entry
+                x:Name="SalaryEntry"
+                Placeholder="Salario"
+                Keyboard="Numeric"
+                ClearButtonVisibility="WhileEditing"
+                SemanticProperties.Description="Salario, solo números" />
+
+            <Button
+                Text="Calcular aporte"
+                Clicked="OnCalculateClicked"
+                SemanticProperties.Hint="Calcula el aporte mensual al IESS" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
